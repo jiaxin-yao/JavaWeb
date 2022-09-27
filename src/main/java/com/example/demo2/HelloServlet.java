@@ -1,14 +1,19 @@
 package com.example.demo2;
 
 import java.io.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+
+//@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet("/s04")
 public class HelloServlet extends HttpServlet {
     private String message;
-
+    @Override
     public void init() {
+        System.out.println("__init__");
         message = "Hello World!";
     }
 
